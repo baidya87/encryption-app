@@ -22,6 +22,7 @@ public class OneKeyEncryption {
 	public static SecretKey generateKey() {
 		try {
 			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+			keyGenerator.init(128);
 			return keyGenerator.generateKey();
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
